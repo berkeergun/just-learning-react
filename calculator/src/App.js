@@ -3,7 +3,7 @@ import { useState } from "react";
 function App() {
 
   const [calc, setCalc] = useState("");
-  const { result, setResult } = useState("");
+  const [ result, setResult ] = useState("");
 
   const ops = ["/", "*", "+", "-", "."];
 
@@ -56,7 +56,8 @@ function App() {
     if(calc === ''){
       return;
     }
-    const value = calc.slice(calc.length,-1);
+    // const value = calc.slice(calc.length,-1);
+    const value = calc.slice(calc.length,calc.length);
     setCalc(value)
   }
 
